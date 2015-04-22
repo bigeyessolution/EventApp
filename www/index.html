@@ -1,56 +1,75 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
-        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- <meta name="msapplication-tap-highlight" content="no" /> -->
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="./js/libs/jquery-mobile/jquery.mobile.css">
+        <link rel="stylesheet" href="./js/libs/font-awesome/css/font-awesome.css">
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css">
-        <script src="https://code.jquery.com/jquery-1.8.2.min.js"></script>
-        <script src="https://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+        <script src="./js/libs/jquery/jquery.js"></script>
+        <script src="./js/libs/jquery-mobile/jquery.mobile.js"></script>
+        
         <title>Big Eyes Event Hub</title>
     </head>
     <body>
         <!-- begin home page -->
-        <section id="page1" data-role="page">
-            <header data-role="header"></header>
-                <div data-role="content" class="content">
+        <section id="mainmenu" data-role="page">
+            <div id="eventhub-mainlogo"></div>
+            <div class="be-main-menu-search-container"><input id="main-input-search" type="search"></div>
+            <div class="be-main-menu-grid">
+                <div class="ui-grid-b">
+                    <div class="ui-block-a"><a href="#eventslist" class="ui-btn">
+                            <div class="center-vertically"><i class="fa fa-bullhorn fa-4x"></i><br>Negócios</div>
+                    </a></div>
+                    <div class="ui-block-b"><a href="#eventslist" class="ui-btn">
+                        <div class="center-vertically"><i class="fa fa-smile-o fa-4x"></i><br>Entreterimento</div>
+                    </a></div>
+                    <div class="ui-block-c"><a href="#eventslist" class="ui-btn">
+                        <div class="center-vertically"><i class="fa fa-star fa-4x"></i><br>Cultura</div>   
+                    </a></div>
                 </div>
-            <footer data-role="footer"></footer>
+                <div class="ui-grid-b">
+                    <div class="ui-block-a"><a href="#eventslist" class="ui-btn">
+                            <div class="center-vertically"><i class="fa fa-university fa-4x"></i><br>Acadêmico</div>
+                    </a></div>
+                    <div class="ui-block-b"><a href="#eventslist" class="ui-btn">
+                        <div class="center-vertically"><i class="fa fa-trophy fa-4x"></i><br>Esportes</div>
+                    </a></div>
+                    <div class="ui-block-c"><a href="#settingspage" class="ui-btn">
+                        <div class="center-vertically"><i class="fa fa-gears fa-4x"></i><br>Configurações</div>
+                    </a></div>
+                </div>
+            </div>
         </section>
         <!-- end home page -->
         
+        <!-- settings page -->
+        <section id="settingspage" data-role="page">
+            <header data-role="header" data-tap-toggle="false" class="ui-header-fixed ui-header-fullscreen">
+                <a href="#mainmenu"><i class="fa fa-chevron-left"></i>&nbsp;Voltar</a>
+                <h1>EventHub</h1>
+            </header>
+        </section>
+        
         <!-- Begin listview page -->
-        <section id="page2" data-role="page">
-            <header data-role="header"></header>
-                <div data-role="content" class="content">
-                </div>
-            <foote data-role="footer"r></footer>
+        <section id="eventslist" data-role="page">
+            <header data-role="header" data-tap-toggle="false" class="ui-header-fixed ui-header-fullscreen">
+                <a href="#mainmenu"><i class="fa fa-chevron-left"></i>&nbsp;Voltar</a>
+                <h1>EventHub</h1>
+            </header>
+            <footer data-role="footer" data-tap-toggle="false" class="ui-footer-fixed ui-footer-fullscreen"></footer>
+            
+            <div role="main" data-role="content">
+            </div>
         </section>
         <!-- end listview page -->
         
         <!-- begin schedule page -->
-        <section id="page3" data-role="page">
+        <section id="schedule" data-role="page">
             <header data-role="header"></header>
                 <div data-role="content" class="content">
                 </div>
@@ -75,15 +94,6 @@
             <footer data-role="footer"></footer>
         </section>
         <!-- end about page -->
-        
-        <!-- begin setting page -->
-        <section id="page6" data-role="page">
-            <header data-role="header"></header>
-                <div data-role="content" class="content">
-                </div>
-            <footer data-role="footer"></footer>
-        </section>
-        <!-- end setting page -->
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
